@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+p {
+    margin-bottom: 1em;
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.register-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.form-container {
+    flex: 1;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+a {
+    margin-bottom: 1em;
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 0.9em;
+    align-self: flex-end;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    padding: 0.75em;
+    background-color: #101010;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+button:hover {
+    background-color: #404040;
+}
+
+span {
+    display: block;
+    color: #666;
+}
+
+span a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+span a:hover {
+    text-decoration: underline;
+}
+
+img.lol {
+    position: absolute;
+    width: 150px;
+    right: 17%;
+    top: 17%;
+}
+
+img.lol {
+    position: absolute;
+    transition: all 1s;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  img.lol:hover {
+    rotate: 360deg;
+    width: 30%;
+    margin-right: -100px;
+    margin-top: -200px;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+    }
+
+    .error, .success {
+        font-size: 14px;
+        font-style: normal;
+    }
+
+    .error {
+        color: red;
+    }
+
+    .success {
+        color: green;
+    }
+
+    p.b {
+        color: red;
+    }

@@ -1,0 +1,67 @@
+/* Reset gaya dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Gaya dasar untuk body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Container utama */
+  .container {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  /* Header */
+  h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Gaya untuk tombol logout */
+  a.logout-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  a.logout-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Gaya tambahan untuk konten */
+  .content {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+  }
+  
