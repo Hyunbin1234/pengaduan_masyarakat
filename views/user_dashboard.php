@@ -19,7 +19,6 @@ $pengaduan = $stmt->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Pengaduan</title>
-    <!-- <link rel="stylesheet" href="user_dashboard.css"> -->
 
     <style>
 
