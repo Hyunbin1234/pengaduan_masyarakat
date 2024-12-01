@@ -171,7 +171,7 @@ input:focus::placeholder {
 <body>
     <div class="login-container">   
         <h1>Login</h1>
-        <p>Login to <b>your</b> account!</p>
+        <p>Login with <b>User 'Public', Pass 'Password'</b> to enter the website Application!</p>
         <form method="POST">
             <label for="text">Username</label>
             <input type="text" name="username" placeholder="Username" required>

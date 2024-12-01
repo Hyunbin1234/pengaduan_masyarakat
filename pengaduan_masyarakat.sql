@@ -27,14 +27,14 @@ SET time_zone = "+00:00";
 -- Table structure for table `pengaduan`
 --
 
-CREATE TABLE `pengaduan` (
-  `id_pengaduan` int NOT NULL,
-  `id_user` int DEFAULT NULL,
-  `judul_pengaduan` varchar(255) DEFAULT NULL,
-  `deskripsi` text,
-  `status_pengaduan` varchar(50) DEFAULT NULL,
-  `tanggal_pengaduan` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+-- CREATE TABLE `pengaduan` (
+--   `id_pengaduan` int NOT NULL,
+--   `id_user` int DEFAULT NULL,
+--   `judul_pengaduan` varchar(255) DEFAULT NULL,
+--   `deskripsi` text,
+--   `status_pengaduan` varchar(50) DEFAULT NULL,
+--   `tanggal_pengaduan` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `pengaduan`
@@ -71,7 +71,7 @@ CREATE TABLE `User` (
 --
 
 INSERT INTO `User` (`id_user`, `nama`, `username`, `password`, `email`, `role`) VALUES
-(1, 'Admin', 'admin', '$2y$10$aLx5X5200gtP980cIkKFDuXoX55kYqNZ/.yxeOf1YZhBi3LhiLv/u', 'admin@example.com', 'admin'),
+-- (1, 'Admin', 'admin', '$2y$10$aLx5X5200gtP980cIkKFDuXoX55kYqNZ/.yxeOf1YZhBi3LhiLv/u', 'admin@example.com', 'admin'),
 (2, 'User Public', 'public', '$2y$10$jbE1fAqoAngYkqb5N9cXruWTEUhMoVxlTMu7AuaRBhpidXOrlVAUi', 'public@example.com', 'public');
 
 --
@@ -81,9 +81,9 @@ INSERT INTO `User` (`id_user`, `nama`, `username`, `password`, `email`, `role`) 
 --
 -- Indexes for table `pengaduan`
 --
-ALTER TABLE `pengaduan`
-  ADD PRIMARY KEY (`id_pengaduan`),
-  ADD KEY `id_user` (`id_user`);
+-- ALTER TABLE `pengaduan`
+--   ADD PRIMARY KEY (`id_pengaduan`),
+--   ADD KEY `id_user` (`id_user`);
 
 --
 -- Indexes for table `User`
@@ -99,8 +99,8 @@ ALTER TABLE `User`
 --
 -- AUTO_INCREMENT for table `pengaduan`
 --
-ALTER TABLE `pengaduan`
-  MODIFY `id_pengaduan` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+-- ALTER TABLE `pengaduan`
+--   MODIFY `id_pengaduan` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `User`
@@ -115,9 +115,9 @@ ALTER TABLE `User`
 --
 -- Constraints for table `pengaduan`
 --
-ALTER TABLE `pengaduan`
-  ADD CONSTRAINT `pengaduan_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `User` (`id_user`) ON DELETE CASCADE;
-COMMIT;
+-- ALTER TABLE `pengaduan`
+--   ADD CONSTRAINT `pengaduan_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `User` (`id_user`) ON DELETE CASCADE;
+-- COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

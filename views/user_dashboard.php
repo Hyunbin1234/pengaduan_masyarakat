@@ -16,108 +16,116 @@ $pengaduan = $stmt->fetchAll();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Pengaduan</title>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="rgba(233, 61, 107, .7)" />
+  
+  <title>Bookself Apps</title>
+  
+  <link rel="stylesheet" href="style.css">
     <style>
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-}
-
-/* Table header styling */
-th {
-    background-color: #4CAF50;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 12px;
-    text-align: left;
-    border-bottom: 2px solid #ddd;
-}
-
-/* Table cell styling */
-td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Alternate row colors */
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* Hover effect on rows */
-tr:hover {
-    background-color: #f5f5f5;
-}
-
-/* Link styling */
-a {
-    display: inline-block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #4CAF50;
-    border-radius: 4px;
-    margin: 10px 0;
-    transition: background-color 0.3s;
-}
-
-a:hover {
-    background-color: #45a049;
-}
-
-/* Heading styling */
-h1 {
-    color: #333;
-    margin: 20px 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Logout link specific styling */
-a[href="logout.php"] {
-    background-color: #f44336;
-}
-
-a[href="logout.php"]:hover {
-    background-color: #da190b;
-}
-
-/* Form link specific styling */
-a[href="form_pengaduan.php"] {
-    background-color: #008CBA;
-}
-
-a[href="form_pengaduan.php"]:hover {
-    background-color: #006d91;
-}
-
+        a {
+            text-decoration: none;
+            color: red;
+            padding-right: 20px;
+            font-weight: bold;
+            background-color: black;
+            display: flex;
+        }
     </style>
 
 </head>
+
 <body>
-    <h1>Daftar Pengaduan Saya</h1>
-    <a href="form_pengaduan.php">Tambah Pengaduan</a>
-    <table>
-        <tr>
-            <th>Judul</th>
-            <th>Status</th>
-            <th>Tanggal</th>
-        </tr>
-        <?php foreach ($pengaduan as $p) { ?>
-        <tr>
-            <td><?= $p['judul_pengaduan']; ?></td>
-            <td><?= $p['status_pengaduan']; ?></td>
-            <td><?= $p['tanggal_pengaduan']; ?></td>
-        </tr>
-        <?php } ?>
-    </table>
-    <a href="logout.php">Logout</a>
+    <a href="logout.php">Logout of the Website Application!!</a> 
+  <nav class="top-bar"></nav>
+  <div class="content">
+    <div class="col-1">
+      <div class="user-information my-container">
+        <div class="user-img">
+          <img src="assets/img/avatar.jpg" alt="Avatar">
+        </div>
+        <h1 class="user-name">Oh Hyunbin</h1>
+        <p class="user-bio"><i class="fi-sr-broom"></i> Programmer dan Content Creator </p>
+        <ul>
+          <li>
+            <p>Jumlah Buku</p>
+            <h4 id="jumlahBuku">3</h4>
+          </li>
+        </ul>
+      </div>
+      <div class="my-container mt-2">
+        <form>
+          <input class="" type="text" name="" id="bookTitle" placeholder="Cari Buku ..."/>
+          <button class="submit" type="submit"><i class="fi-rr-search"></i></button>
+        </form>
+      </div>
+      <div class="my-container icons">
+        <div class="my-icon">
+          <div class="read-icon">
+            <i class="fi-rr-book-alt"></i>
+          </div>
+          <h5>Dibaca</h5>
+        </div>
+        <div class="my-icon">
+          <div class="unread-icon">
+             <i class="fi-rr-bookmark"></i>
+            </div>
+            <h5>Belum Dibaca</h5>
+        </div>
+        <div class="my-icon">
+           <div class="add-book" id="add-book">
+            <i class="fi-sr-add"></i>
+          </div>
+          <h5>add</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="my-container welcome">
+        <h1>Selamat Datang di Bookself Apps</h1>
+        <p>Kelola Buku jadi lebih mudah hanya di Bookself Apps, Coba Sekarang !</p>
+      </div>
+      
+      
+      <div class="content-book">
+        <div class="unread" id="unread">
+          <h4 class="">Belum Dibaca</h4>
+        </div>
+        
+         <div class="read" id="read">
+          <h4>Sudah Dibaca</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="modal">
+        <section class="my-container">
+            <h2>New Book</h2>
+            <form id="form">
+                <div class="input-group">
+                    <input type="text" id="title" placeholder="Judul Buku" class="input-form"
+                        maxlength="120" pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="text" id="author" placeholder="Author" class="input-form"
+                        maxlength="60" pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="date" id="year" 
+                        class="input-form" min="1900" max="2026" />
+                </div>
+                <div class="button-group">
+                    <button type="reset" class="close" id="close">Close</button>
+                    <button type="submit" id="save">Save</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    
+  <script src="./storage.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
